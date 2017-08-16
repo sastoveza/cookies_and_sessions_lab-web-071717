@@ -1,0 +1,16 @@
+<h2>Current cart:</h2>
+	<ul>
+	<% cart.each do |i| %>
+		<li><%= i %></li>
+	</ul>
+
+	<% end %> 
+
+	<br>
+
+<%= form_tag '/' do %>
+	<label>New Product:</label><br>
+	<%= text_field_tag :product %><br>
+	<%= submit_tag 'add to cart' %>
+
+<% end %>
